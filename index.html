@@ -10,6 +10,9 @@
     <title>Dice Game</title>
 </head>
 <body>
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
     <section id="scoreboard">
         <div class="scoreboard">
             <div class="first-score">
@@ -46,12 +49,22 @@
         </div>
     </section>
     <section>
-        <div class="madeby">
-            <p> Made by <a href="https://www.github.com/cemalerkar" id="cemalerkar">Cemal Erkar</a></p>
-        </div>
     </section>
     <div id="playagain">
         <a class="playagain" href=".">Play Again!</a>
+        <div class="madeby">
+            <p> Made by <a href="https://www.github.com/cemalerkar" id="cemalerkar">Cemal Erkar</a></p>
+        </div>
+    </div>
+    <div class="madeby">
+        <p id="cemalerkars"> Made by <a href="https://www.github.com/cemalerkar" id="cemalerkar">Cemal Erkar</a></p>
     </div>
 </body>
+<script>
+    var loader = document.getElementById("loading-screen");
+
+    window.addEventListener("load", function(){
+        loader.style.display = "none";
+    })
+</script>
 </html>
