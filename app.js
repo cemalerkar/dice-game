@@ -86,6 +86,7 @@ function Throw() {
             playagain.style.display="flex";
             but3.disabled = "disable";
             alert("First Player Win The Game!")
+            document.getElementById("cemalerkars").style.display = "none";
         } 
         but2.disabled ="disable";
         but3.disabled ="";
@@ -93,12 +94,14 @@ function Throw() {
     if (queue===2) {
         secondscore+=random;
         scoretwo.innerHTML=secondscore;
-        if (secondscore>=50) {
+        if (secondscore>=0) {
             gameFinished=true;
             scoretable.style.display= "none";
             gamearea.style.display= "none";
+            playagain.style.display="flex";
             alert("Second Player Win The Game!")
             but1.disabled= "disable";
+            document.getElementById("cemalerkars").style.display = "none";
         } 
         but4.disabled ="disable";
         but1.disabled ="";
