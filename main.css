@@ -142,6 +142,7 @@ body {
 }
 #playagain {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     display: none;
@@ -161,6 +162,29 @@ body {
 .madeby a {
     color: #FCA311;
 }
+#loading-screen{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    background-color: #14213D;
+}
+.loader {
+    border: 10px solid #FCA311;
+    border-top: 10px solid #9d650b74;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
 @media only screen and (max-width: 1389px){
     .first-player , .second-player {
         padding: 0 60px;
@@ -190,9 +214,6 @@ body {
     .gamebox {
         flex-direction: column;
         height: 550px;
-    }
-    .madeby {
-        color: #FCA311;
     }
 }
 @media only screen and (max-width: 519px){
