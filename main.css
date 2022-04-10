@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+body {
+    background-color: #14213D;
+    color: #FCA311;
+    width: 100%;
+}
+#scoreboard {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.scoreboard {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.first-score , .second-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    height: 200px;
+    background-color: #FCA311;
+    border-radius: 20px;
+    box-shadow: 0px 6px #9d650b74;
+    transition: 0.5s;
+}
+.players {
+    background-color: #14213D;
+    padding: 4px 15px;
+    border-radius: 20px;
+    margin-top: 8px;
+    box-shadow: 0 4px #14213d91;
+    transition: 0.5s;
+}
+.score {
+    color: #14213D;
+    font-size: 72px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+#gamearea {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.gamearea {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.gamebox {
+    width: 50%;
+    height: 400px;
+    background-color: #FCA311;
+    box-shadow: 0 6px #9d650b74;
+    border-radius: 20px;
+    color: #14213D;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.5s;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+.but {
+    margin-top: 5px;
+}
+.first-player , .second-player {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 80px;
+    border-radius: 20px;
+    background-color: #9d650b74;
+    transition: 0.5s;
+}
+.first-player .players , .second-player .players {
+    color: #FCA311;
+}
+.first-player img , .second-player img {
+    border-radius: 20px;
+    width: 100%;
+    transition: 1s;
+}
+.first-player button, .second-player button {
+    border-radius: 10px;
+    padding: 5px 45px;
+    background-color: #14213D;
+    color: #FCA311;
+}
+.first-player button:disabled, .second-player button:disabled {
+    background-color: #14213d3c;
+    color: #fca2113c;
+}
+.playagain {
+    background-color: #FCA311;
+    color: #14213D;
+    padding: 4px 15px;
+    border-radius: 20px;
+    margin-top: 8px;
+    box-shadow: 0 4px #9d650b74;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.playagain::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #9d650b74;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+.playagain:hover::after {
+    top: 0;
+}
+#playagain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.madeby {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    color: #9d650bf5;
+    font-weight: 600;
+    transition: 0.5;
+}
+.madeby a {
+    color: #FCA311;
+}
+@media only screen and (max-width: 1389px){
+    .first-player , .second-player {
+        padding: 0 60px;
+    }
+}
+@media only screen and (max-width: 1297px){
+    .first-player , .second-player {
+        padding: 0 40px;
+    }
+}
+@media only screen and (max-width: 1158px){
+    .first-player , .second-player {
+        padding: 0 20px;
+    }
+}
+@media only screen and (max-width: 986px){
+    .first-player , .second-player {
+        padding: 0 10px;
+    }
+}
+@media only screen and (max-width: 907px){
+    .first-player , .second-player {
+        background: none;
+    }
+}
+@media only screen and (max-width: 689px){
+    .gamebox {
+        flex-direction: column;
+        height: 550px;
+    }
+    .madeby {
+        color: #FCA311;
+    }
+}
+@media only screen and (max-width: 519px){
+    .first-score , .second-score {
+        width: 150px;
+        height: 150px;
+    }
+    .madeby {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 304px){
+    .first-score , .second-score {
+        width: 120px;
+        height: 120px;
+    }
+    .gamebox {
+        width: 150px;
+    }
+}
+@media only screen and (max-width: 241px){
+    .first-score , .second-score {
+        width: 90px;
+        height: 90px;
+    }
+    .players {
+        font-size: 10px;
+    }
+    .score {
+        font-size: 30px;
+    }
+}
