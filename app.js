@@ -94,7 +94,7 @@ function Throw() {
     if (queue===2) {
         secondscore+=random;
         scoretwo.innerHTML=secondscore;
-        if (secondscore>=0) {
+        if (secondscore>=50) {
             gameFinished=true;
             scoretable.style.display= "none";
             gamearea.style.display= "none";
