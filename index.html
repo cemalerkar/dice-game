@@ -13,54 +13,72 @@
     <div id="loading-screen">
         <div class="loader"></div>
     </div>
-    <section id="scoreboard">
-        <div class="scoreboard">
-            <div class="first-score">
-                <p class="players">Player One</p>
-                <p class="score" id="scoreone">0</p>
+    <div class="inputarea" id="inputarea">
+        <div class="inputs">
+            <div id="dicehead">
+                <h2>Dice Game</h2>
             </div>
-            <div class="second-score">
-                <p class="players">Player Two</p>
-                <p class="score" id="scoretwo">0</p>
+            <div class="input">
+                <label for="firstplayername">Enter first player's name</label>
+                <input type="text" id="firstplayername">
             </div>
-        </div>
-    </section>
-
-    <section id="gamearea">
-        <div class="gamearea">
-            <div class="gamebox">
-                <div class="first-player">
-                    <p class="players">Player One</p>
-                    <img src="img/dice-six-faces-one.png" alt="" id="rollfirst">
-                    <div class="buttons">
-                        <button onclick="roll(1)" id="but1">Roll</button>
-                        <button disabled="disabled" onclick="Throw(1)" class="but" id="but2">Throw</button>
-                    </div>
-                </div>
-                <div class="second-player">
-                    <p class="players">Player Two</p>
-                    <img src="img/dice-six-faces-one.png" alt="" id="rollsecond">
-                    <div class="buttons">
-                        <button disabled="disabled" onclick="roll(2)" id="but3">Roll</button>
-                        <button disabled="disabled" onclick="Throw(2)" class="but" id="but4">Throw</button>
-                    </div>
-                </div>
+            <div class="input">
+                <label for="secondplayername">Enter second player's name</label>
+                <input type="text" id="secondplayername">
             </div>
-        </div>
-    </section>
-    <section>
-    </section>
-    <div id="playagain">
-        <a class="playagain" href=".">Play Again!</a>
-        <div class="madeby">
-            <p> Made by <a href="https://www.github.com/cemalerkar" id="cemalerkar">Cemal Erkar</a></p>
+            <button class="players border"onclick="Submit()">Submit</button>
         </div>
     </div>
-    <div class="madeby">
-        <p id="cemalerkars"> Made by <a href="https://www.github.com/cemalerkar" id="cemalerkar">Cemal Erkar</a></p>
+    <div id="gamea" style="display: none;">
+        <section id="scoreboard">
+            <div class="scoreboard">
+                <div class="first-score">
+                    <p class="players" id="p1">Player One</p>
+                    <p class="score" id="scoreone">0</p>
+                </div>
+                <div class="second-score">
+                    <p class="players" id="p2">Player Two</p>
+                    <p class="score" id="scoretwo">0</p>
+                </div>
+            </div>
+        </section>
+    
+        <section id="gamearea">
+            <div class="gamearea">
+                <div class="gamebox">
+                    <div class="first-player">
+                        <p class="players" id="p3">Player One</p>
+                        <img src="img/dice-six-faces-one.png" alt="" id="rollfirst">
+                        <div class="buttons">
+                            <button onclick="roll(1)" id="but1">Roll</button>
+                            <button disabled="disabled" onclick="Throw(1)" class="but" id="but2">Throw</button>
+                        </div>
+                    </div>
+                    <div class="second-player">
+                        <p class="players" id="p4">Player Two</p>
+                        <img src="img/dice-six-faces-one.png" alt="" id="rollsecond">
+                        <div class="buttons">
+                            <button disabled="disabled" onclick="roll(2)" id="but3">Roll</button>
+                            <button disabled="disabled" onclick="Throw(2)" class="but" id="but4">Throw</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+        </section>
+        <div id="playagain">
+            <a class="playagain" href=".">Play Again!</a>
+            <div class="madeby">
+                <p> Made by <a href="https://www.github.com/cemalerkar" id="cemalerkar">Cemal Erkar</a></p>
+            </div>
+        </div>
+        <div class="madeby">
+            <p id="cemalerkars"> Made by <a href="https://www.github.com/cemalerkar" id="cemalerkar">Cemal Erkar</a></p>
+        </div>
     </div>
 </body>
-    <script>
+<script>
     var loader = document.getElementById("loading-screen");
 
     window.addEventListener("load", function(){
