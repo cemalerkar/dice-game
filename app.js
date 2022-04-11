@@ -14,6 +14,34 @@ var gameFinished = false;
 var scoretable = document.getElementById("scoreboard");
 var gamearea = document.getElementById("gamearea");
 var playagain = document.getElementById("playagain");
+var inputarea = document.getElementById("inputarea");
+var gamea = document.getElementById("gamea");
+
+function Submit(){
+
+    if (document.getElementById("firstplayername").value.length == 0 ) {
+        alert("Please enter a name for First Player")
+        return false;
+    } else if (document.getElementById("firstplayername").value.length > 10 ) {
+        alert("First Player's name is too long. (Max=10 letters)")
+        return false;
+    } else if (document.getElementById("secondplayername").value.length == 0 ) {
+        alert("Please enter a name for Second Player")
+        return false;
+    } else if (document.getElementById("secondplayername").value.length > 10 ) {
+        alert("Second Player's name is too long. (Max=10 letters)")
+        return false;
+    } else if (document.getElementById("firstplayername").value == document.getElementById("secondplayername").value) {
+        alert("Please make sure First Player and Second Player's name aren't same");
+        return false;
+    } else
+    document.getElementById("p1").innerHTML = document.getElementById("firstplayername").value;
+    document.getElementById("p2").innerHTML = document.getElementById("secondplayername").value;
+    document.getElementById("p3").innerHTML = document.getElementById("firstplayername").value;
+    document.getElementById("p4").innerHTML = document.getElementById("secondplayername").value;
+    inputarea.style.display = "none";
+    gamea.style.display = "";
+}
 
 function roll(player) {
         queue = player;
@@ -85,7 +113,7 @@ function Throw() {
             gamearea.style.display= "none";
             playagain.style.display="flex";
             but3.disabled = "disable";
-            alert("First Player Win The Game!")
+            alert(document.getElementById("firstplayername").value + " Win The Game!")
             document.getElementById("cemalerkars").style.display = "none";
         } 
         but2.disabled ="disable";
@@ -99,7 +127,7 @@ function Throw() {
             scoretable.style.display= "none";
             gamearea.style.display= "none";
             playagain.style.display="flex";
-            alert("Second Player Win The Game!")
+            alert(document.getElementById("secondplayername").value + " Win The Game!")
             but1.disabled= "disable";
             document.getElementById("cemalerkars").style.display = "none";
         } 
