@@ -43,6 +43,13 @@ body {
     margin-top: 8px;
     box-shadow: 0 4px #14213d91;
     transition: 0.5s;
+    max-width: 140px;
+    overflow: hidden;
+}
+.border {
+    border: none;
+    color: #FCA311;
+    cursor: pointer;
 }
 .score {
     color: #14213D;
@@ -180,6 +187,46 @@ body {
     height: 80px;
     animation: spin 2s linear infinite;
 }
+.inputarea {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#dicehead h2{
+    font-size: 30px;
+}
+.inputs {
+    width: 50%;
+    height: 400px;
+    background-color: #FCA311;
+    box-shadow: 0 6px #9d650b74;
+    border-radius: 20px;
+    color: #14213D;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 100px 0;
+    align-items: center;
+    transition: 0.5s;
+}
+.input {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.input input {
+    width: 250px;
+    height: 25px;
+    background-color: #14213D;
+    box-shadow: 0 4px #14213d91;
+    border: none;
+    border-radius: 20px;
+    padding-left: 10px;
+    color: #FCA311;
+}
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -225,13 +272,45 @@ body {
         font-size: 12px;
     }
 }
-@media only screen and (max-width: 304px){
+@media only screen and (max-width: 563px){
+    #dicehead h2{
+        font-size: 20px;
+    }
+    .input input {
+        width: 200px;
+    }
+    .input label {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 431px){
+    #dicehead h2{
+        font-size: 15px;
+    }
+    .input input {
+        width: 150px;
+    }
+    .input label {
+        font-size: 11px;
+    }
+}
+@media only screen and (max-width: 305px){
     .first-score , .second-score {
         width: 120px;
         height: 120px;
     }
     .gamebox {
         width: 150px;
+    }
+    .input {
+        display: flex;
+        align-items: center;
+    }
+    .input input {
+        width: 100px;
+    }
+    .input label {
+        font-size: 10px;
     }
 }
 @media only screen and (max-width: 241px){
